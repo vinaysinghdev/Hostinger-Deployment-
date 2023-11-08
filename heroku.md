@@ -23,7 +23,7 @@
 #### systemctl start nginx
 #### sudo apt-get remove apache2*
 
-#### mkdir -p /var/www/servername.com/html
+#### mkdir -p /var/www/serverconfig/html
 #### chown -R $USER:$USER /var/www/serverconfig/html
 #### chmod -R 755 /var/www/serverconfig
 #### nano /var/www/serverconfig/html/index.html
