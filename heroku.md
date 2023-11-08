@@ -24,9 +24,9 @@
 #### sudo apt-get remove apache2*
 
 #### mkdir -p /var/www/servername.com/html
-#### chown -R $USER:$USER /var/www/servername.com/html
-#### chmod -R 755 /var/www/servername.com
-#### nano /var/www/servername.com/html/index.html
+#### chown -R $USER:$USER /var/www/serverconfig/html
+#### chmod -R 755 /var/www/serverconfig
+#### nano /var/www/serverconfig/html/index.html
 
 > Now paste sample html
 
@@ -52,13 +52,13 @@
 ## setup nginx config
 
 
-#### nano /etc/nginx/sites-available/servername.com
+#### nano /etc/nginx/sites-available/serverconfig
 
 ```
 server { 
   listen 80; 
   listen [::]:80; 
-  root /var/www/servername.com/html; 
+  root /var/www/serverconfig/html; 
   index index.html index.htm index.nginx-debian.html; 
   server_name [Your Server IP]; 
   location / { 
@@ -69,7 +69,7 @@ server {
 
 
 #### ls /etc/nginx
-#### ln -s /etc/nginx/sites-available/servername.com /etc/nginx/sites-enabled
+#### ln -s /etc/nginx/sites-available/serverconfig /etc/nginx/sites-enabled
 
 #### nginx -t
 #### systemctl restart nginx
@@ -99,7 +99,7 @@ server {
 
 #### cd /etc/
 #### cd nginx
-#### nano sites-available/servername.com
+#### nano sites-available/serverconfig
 
 
 ## remove all server script and paste
@@ -137,7 +137,7 @@ server {
 
 ## non www to www redirection
 
-#### nano /etc/nginx/sites-available/servername.com
+#### nano /etc/nginx/sites-available/serverconfig
 
 > paste this in server after server name
  
